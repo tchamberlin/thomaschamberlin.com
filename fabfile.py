@@ -1,10 +1,11 @@
-from fabric.api import *
-import fabric.contrib.project as project
 import os
 import shutil
 import sys
-import SocketServer
+import socketserver as SocketServer
+from datetime import datetime
 
+from fabric.api import *
+import fabric.contrib.project as project
 from pelican.server import ComplexHTTPRequestHandler
 
 # Local path configuration (can be absolute or relative to fabfile)
@@ -16,15 +17,15 @@ production = 'root@localhost:22'
 dest_path = '/var/www'
 
 # Rackspace Cloud Files configuration settings
-env.cloudfiles_username = 'my_rackspace_username'
-env.cloudfiles_api_key = 'my_rackspace_api_key'
-env.cloudfiles_container = 'my_cloudfiles_container'
+# env.cloudfiles_username = 'my_rackspace_username'
+# env.cloudfiles_api_key = 'my_rackspace_api_key'
+# env.cloudfiles_container = 'my_cloudfiles_container'
 
 # Github Pages configuration
 env.github_pages_branch = "gh-pages"
 
 # Port for `serve`
-PORT = 8000
+PORT = 8585
 
 def clean():
     """Remove generated files"""
@@ -90,3 +91,50 @@ def gh_pages():
     """Publish to GitHub Pages"""
     rebuild()
     local("ghp-import -b {github_pages_branch} {deploy_path} -p".format(**env))
+
+
+
+TEMPLATE = """
+{title}
+{hashes}
+
+:date: {year}-{month}-{day} {hour}:{minute:02d}
+:tags:
+:category:
+:slug: {slug}
+:summary:
+:status: draft
+
+
+"""
+
+def make_entry(title):
+    today = datetime.today()
+    slug = title.lower().strip().replace(' ', '-')
+    f_create = "content/{}_{:0>2}_{:0>2}_{}.rst".format(
+        today.year, today.month, today.day, slug)
+    t = TEMPLATE.strip().format(title=title,
+                                hashes='#' * len(title),
+                                year=today.year,
+                                month=today.month,
+                                day=today.day,
+                                hour=today.hour,
+                                minute=today.minute,
+                                slug=slug)
+    with open(f_create, 'w') as w:
+        w.write(t)
+    print("File created -> " + f_create)
+
+import livereload
+
+def live_build(port=8585):
+
+    local('make clean')  # 1
+    local('make html')  # 2
+    os.chdir('output')  # 3
+    server = livereload.Server()  # 4
+    server.watch('../content/*.rst',  # 5
+        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 6
+    server.watch('*.html')  # 9
+    server.watch('*.css')  # 10
+    server.serve(liveport=35729, host='0.0.0.0', port=port)  # 11
