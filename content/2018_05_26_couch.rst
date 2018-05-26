@@ -23,13 +23,15 @@ As always, here's the model. Click on this to view it interactively. It can also
 
 .. raw:: html
 
+    <div width="100%">
     <iframe
         src="https://3dwarehouse.sketchup.com/embed.html?mid=53378115-59cc-45fc-9232-4ba3dde4b4b1"
         frameborder="0"
         scrolling="no"
         marginheight="0"
         marginwidth="0"
-        width="580"
+        width="100%"
         height="326"
         allowfullscreen
     ></iframe>
+    </div>
