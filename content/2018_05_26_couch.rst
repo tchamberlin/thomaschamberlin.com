@@ -1,0 +1,35 @@
+Couch
+#####
+
+:date: 2018-5-26 17:59
+:tags: furniture
+:category: Projects
+:slug: couch
+:summary: Couches for home theater system
+
+I currently have a home theater setup in my living room. However, the room is not well-suited for it at all, so it's been quite the endeavor. I have one wall covered by the screen, another covered by windows, and another angled awkwardly in relation to the screen. That leaves the back wall for viewing movies.
+
+Currently I have two couches along the back wall, each angled across a corner there. But they don't really fit very well and it leaves a lot of wasted space behind them. So, I'd like to build a couch that covers the entirety of the back wall.
+
+Additionally I'd like to place a second couch along the "awkward viewing" wall, but be able to relocate it in order to watch movies. This means I'll need to loft the back couch -- sort of like stadium seating.
+
+Still in the planning phases of this, but I think I can attach the legs of the back couch on axles so that it can be lofted up/down when needed. More images incoming shortly, but this should give a general idea at least:
+
+.. image:: /images/couch.jpg
+    :alt: Lofted couches
+    :width: 100%
+
+As always, here's the model. Click on this to view it interactively. It can also be downloaded and examined more closely in SketchUp, if you're into that sort of thing:
+
+.. raw:: html
+
+    <iframe
+        src="https://3dwarehouse.sketchup.com/embed.html?mid=53378115-59cc-45fc-9232-4ba3dde4b4b1"
+        frameborder="0"
+        scrolling="no"
+        marginheight="0"
+        marginwidth="0"
+        width="580"
+        height="326"
+        allowfullscreen
+    ></iframe>
