@@ -1,3 +1,3 @@
 #!/bin/bash
 
-make clean && make publish && ghp-import output && git https://github.com/tchamberlin/tchamberlin.github.io gh-pages:master
+make clean && make publish && ghp-import output && git push https://github.com/tchamberlin/tchamberlin.github.io gh-pages:master
