@@ -38,6 +38,8 @@ JINJA_ENVIRONMENT = {
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
 
+# FAVICON = 'images/favicon.ico'
+
 # SHOW_DATE_MODIFIED = True
 
 # DISPLAY_ARTICLE_INFO_ON_INDEX = True
