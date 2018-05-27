@@ -55,9 +55,9 @@ CC_LICENSE = "CC-BY"
 
 # GitHub sidebar info
 GITHUB_USER = 'tchamberlin'
-GITHUB_REPO_COUNT = True
-GITHUB_SKIP_FORK = True
-GITHUB_SHOW_USER_LINK = True
+GITHUB_REPO_COUNT = 5
+GITHUB_SKIP_FORK = 'true'
+GITHUB_SHOW_USER_LINK = 'true'
 
 # Include breadcrumbs at top
 DISPLAY_BREADCRUMBS = True

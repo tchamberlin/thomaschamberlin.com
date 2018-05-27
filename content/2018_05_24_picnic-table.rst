@@ -29,5 +29,3 @@ Click on this to view it interactively. It can also be downloaded and examined m
         height="500"
         allowfullscreen
     ></iframe>
-
-foobar!
