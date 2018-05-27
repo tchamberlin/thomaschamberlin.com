@@ -12,6 +12,7 @@ from baseconf import *
 
 SITEURL = 'https://thomaschamberlin.com'
 
+FEED_DOMAIN = SITEURL
 FEED_ALL_ATOM = 'feeds/all.atom.xml'
 CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 

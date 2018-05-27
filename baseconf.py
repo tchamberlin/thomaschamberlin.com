@@ -21,7 +21,7 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Social widget
-# SOCIAL = (('GitHub', 'http://github.com/tchamberlin'),)
+SOCIAL = (('GitHub', 'http://github.com/tchamberlin'),)
 
 DEFAULT_PAGINATION = 10
 THEME = "../pelican-themes/pelican-bootstrap3"
@@ -38,7 +38,7 @@ JINJA_ENVIRONMENT = {
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
 
-SHOW_DATE_MODIFIED = True
+# SHOW_DATE_MODIFIED = True
 
 # DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
@@ -62,10 +62,10 @@ DISPLAY_TAGS_INLINE = True
 CC_LICENSE = "CC-BY"
 
 # GitHub sidebar info
-GITHUB_USER = 'tchamberlin'
-GITHUB_REPO_COUNT = 5
-GITHUB_SKIP_FORK = 'true'
-GITHUB_SHOW_USER_LINK = 'true'
+# GITHUB_USER = 'tchamberlin'
+# GITHUB_REPO_COUNT = 5
+# GITHUB_SKIP_FORK = 'true'
+# GITHUB_SHOW_USER_LINK = 'true'
 
 # Include breadcrumbs at top
 DISPLAY_BREADCRUMBS = True
