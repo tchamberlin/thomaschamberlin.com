@@ -6,6 +6,7 @@ AUTHOR = 'Thomas Chamberlin'
 SITENAME = 'Thomas Chamberlin'
 SITEURL = ''
 
+# Path to site content
 PATH = 'content'
 
 TIMEZONE = 'America/New_York'
@@ -22,33 +23,36 @@ AUTHOR_FEED_RSS = None
 # Social widget
 # SOCIAL = (('GitHub', 'http://github.com/tchamberlin'),)
 
-DEFAULT_PAGINATION = None
-THEME = f"../pelican-themes/pelican-bootstrap3"
+DEFAULT_PAGINATION = 10
+THEME = "../pelican-themes/pelican-bootstrap3"
 
-PLUGIN_PATHS = ['../pelican-plugins', ]
-PLUGINS = ['i18n_subsites', 'series']
+# NOTE: This might need to change if this repo is forked!
+PLUGIN_PATHS = ['../pelican-plugins']
+# i18n_subsites is required for pelican-bootstrap3, even if you aren't using translations
+PLUGINS = ['i18n_subsites', 'series', 'tipue_search', 'tag_cloud']
+# Again, required for pelican-bootstrap3
 JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
 }
 
-# SIDEBAR = "sidebar.html"
-# CUSTOM_SIDEBAR_MIDDLES = ("sb_taglist.html", )
-
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
-# SITELOGO = SITEURL + '/images/profile.jpg'
 
 AVATAR = 'images/profile.jpg'
-# AVATAR = None
 ABOUT_ME = "I like to build stuff"
 BANNER = 'images/banner.jpg'
 
-# SHOW_ARTICLE_CATEGORY = True
-
+# This is only here to include search
+DIRECT_TEMPLATES = ('index', 'categories', 'authors', 'archives', 'search')
 
 # Series
-# SHOW_SERIES = True
-# DISPLAY_SERIES_ON_SIDEBAR = True
+SHOW_SERIES = True
+DISPLAY_SERIES_ON_SIDEBAR = True
+
+# Enable tag display in sidebar
+DISPLAY_TAGS_ON_SIDEBAR = True
+# This enables the tag cloud
+DISPLAY_TAGS_INLINE = True
 
 # CC Footer
 CC_LICENSE = "CC-BY"
