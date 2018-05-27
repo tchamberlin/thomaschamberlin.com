@@ -35,7 +35,7 @@ JINJA_ENVIRONMENT = {
 # CUSTOM_SIDEBAR_MIDDLES = ("sb_taglist.html", )
 
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 # SITELOGO = SITEURL + '/images/profile.jpg'
 
 AVATAR = 'images/profile.jpg'
