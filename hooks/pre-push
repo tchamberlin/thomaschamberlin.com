@@ -4,7 +4,7 @@ while read oldrev newrev refname; do
     branch=$(git rev-parse --symbolic --abbrev-ref $refname)
     if [ "master" == "$branch" ]; then
         echo "Publishing due to push to master branch..."
-        make clean && make publish && ghp-import output && git push --no-verify https://github.com/tchamberlin/tchamberlin.github.io gh-pages:master
+        make clean && make publish && ghp-import output && git push --no-verify https://github.com/tchamberlin/tchamberlin.github.io gh-pages:master || exit 1
         echo "...publishing complete!"
     fi
 done
