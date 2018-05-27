@@ -35,15 +35,15 @@ def clean():
 
 # def build():
 #     """Build local version of site"""
-#     local('pelican -s pelicanconf.py')
+#     local('pelican -s baseconf.py')
 
 def rebuild():
     """`build` with the delete switch"""
-    local('pelican -d -s pelicanconf.py')
+    local('pelican -d -s baseconf.py')
 
 def regenerate():
     """Automatically regenerate site upon file modification"""
-    local('pelican -r -s pelicanconf.py')
+    local('pelican -r -s baseconf.py')
 
 def serve():
     """Serve site at http://localhost:8000/"""
@@ -64,7 +64,7 @@ def reserve():
 
 # def preview():
 #     """Build production version of site"""
-#     local('pelican -s publishconf.py')
+#     local('pelican -s prodconf.py')
 
 # def cf_upload():
 #     """Publish to Rackspace Cloud Files"""
@@ -78,7 +78,7 @@ def reserve():
 # @hosts(production)
 # def publish():
 #     """Publish to production via rsync"""
-#     local('pelican -s publishconf.py')
+#     local('pelican -s prodconf.py')
 #     project.rsync_project(
 #         remote_dir=dest_path,
 #         exclude=".DS_Store",
