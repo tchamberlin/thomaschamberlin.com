@@ -29,7 +29,7 @@ THEME = "../pelican-themes/pelican-bootstrap3"
 # NOTE: This might need to change if this repo is forked!
 PLUGIN_PATHS = ['../pelican-plugins']
 # i18n_subsites is required for pelican-bootstrap3, even if you aren't using translations
-PLUGINS = ['i18n_subsites', 'series', 'tipue_search', 'tag_cloud']
+PLUGINS = ['i18n_subsites', 'series', 'tipue_search', 'tag_cloud', 'pin_to_top']
 # Again, required for pelican-bootstrap3
 JINJA_ENVIRONMENT = {
     'extensions': ['jinja2.ext.i18n'],
@@ -37,6 +37,10 @@ JINJA_ENVIRONMENT = {
 
 # Uncomment following line if you want document-relative URLs when developing
 RELATIVE_URLS = False
+
+SHOW_DATE_MODIFIED = True
+
+# DISPLAY_ARTICLE_INFO_ON_INDEX = True
 
 AVATAR = 'images/profile.jpg'
 ABOUT_ME = "I like to build stuff"
