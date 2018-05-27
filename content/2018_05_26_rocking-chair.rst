@@ -5,7 +5,7 @@ Rocking Chair
 :tags: furniture
 :category: Projects
 :slug: rocking-chair
-:summary:
+:summary: First attempt at a rocking chair design. Pretty boxy, but a good start I think
 
 First attempt at a rocking chair design!
 
@@ -20,6 +20,8 @@ And here it is, blissfully in his absence:
 .. image:: /images/rocking_chair.jpg
     :alt: Rocking Chair
     :width: 100%
+
+
 
 Based on these `ergonomic guidelines <http://ergo.human.cornell.edu/DEA3250Flipbook/DEA3250notes/sitting.html>`_ I found, I went with a 5° seat angle, 10° back angle. and this information on `rocker radius sizing <http://www.rockingchairuniversity.com/rocker-radius.html>`_. (with respect to vertical).
 

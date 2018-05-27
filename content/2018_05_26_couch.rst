@@ -3,6 +3,7 @@ Couch
 
 :date: 2018-5-26 17:59
 :tags: furniture
+:series: Home Theater
 :category: Projects
 :slug: couch
 :summary: Couches for home theater system

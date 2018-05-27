@@ -1,0 +1,3 @@
+#!/bin/bash
+
+make clean && make publish && ghp-import output && git https://github.com/tchamberlin/tchamberlin.github.io gh-pages:master

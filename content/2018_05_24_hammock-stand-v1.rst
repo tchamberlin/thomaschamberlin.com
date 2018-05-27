@@ -5,6 +5,7 @@ Hammock Stand v1
 
 :date: 2018-04-26 22:02
 :tags: furniture,hammock,wood
+:series: Hammock Stand
 :category: Projects
 :slug: hammock-stand-v1
 :summary: Triangular hammock stand, round 1

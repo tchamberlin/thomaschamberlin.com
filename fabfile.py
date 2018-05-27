@@ -33,9 +33,9 @@ def clean():
         shutil.rmtree(DEPLOY_PATH)
         os.makedirs(DEPLOY_PATH)
 
-def build():
-    """Build local version of site"""
-    local('pelican -s pelicanconf.py')
+# def build():
+#     """Build local version of site"""
+#     local('pelican -s pelicanconf.py')
 
 def rebuild():
     """`build` with the delete switch"""
@@ -127,14 +127,30 @@ def make_entry(title):
 
 import livereload
 
-def live_build(port=8585):
+def _live_build(mode, port=8585):
+    local('make clean')
+    if mode == 'prod':
+        local('make publish')
+        conf = 'publishconf'
+    elif mode == 'dev':
+        local('make html')
+        conf = 'pelicanconf'
+    else:
+        raise ValueError(f"Invalid conf: {conf}")
+    os.chdir('output')
+    server = livereload.Server()
+    server.watch('../content/*.rst',
+        livereload.shell(f'pelican -s ../{conf}.py -o ../output'))
+    server.watch('*.html')
+    server.watch('*.css')
 
-    local('make clean')  # 1
-    local('make html')  # 2
-    os.chdir('output')  # 3
-    server = livereload.Server()  # 4
-    server.watch('../content/*.rst',  # 5
-        livereload.shell('pelican -s ../pelicanconf.py -o ../output'))  # 6
-    server.watch('*.html')  # 9
-    server.watch('*.css')  # 10
-    server.serve(liveport=35729, host='0.0.0.0', port=port)  # 11
+    server.serve(liveport=35729, host='0.0.0.0', port=port)
+
+def build_dev(*args, **kwargs):
+    return _live_build('dev', *args, **kwargs)
+
+
+def build_prod(*args, **kwargs):
+    return _live_build('prod', *args, **kwargs)
+
+import fabric

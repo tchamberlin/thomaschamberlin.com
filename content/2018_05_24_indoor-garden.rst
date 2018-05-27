@@ -3,6 +3,7 @@ Indoor Garden v2
 
 :date: 2018-5-24 18:08
 :tags: hydroponics,furniture
+:series: Hydroponics
 :category: Projects
 :slug: indoor-garden
 :summary: Indoor garden, round 2
